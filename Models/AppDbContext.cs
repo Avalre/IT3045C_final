@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using IT3045C_final.Models;
 
-//Added DbContext for Entity Framework Core-Patricia Echoles
 namespace IT3045C_final.Models
 { 
     public class AppDbContext : DbContext
@@ -9,7 +7,9 @@ namespace IT3045C_final.Models
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        public DbSet<TeamInfo> TeamInfos { get; set; }
+        public DbSet<TeamInfo> TeamInfo { get; set; }
         public DbSet<FavoriteVideoGame> FavoriteVideoGames { get; set; }
+
+        // TODO: Add DbSet properties for other models as needed
     }
 }
